@@ -1,1 +1,2 @@
-pytest  # Framework de testes
+pytest
+pytest-cov
