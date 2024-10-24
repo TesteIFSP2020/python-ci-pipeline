@@ -1,4 +1,4 @@
-name: CI Build
+name: CI Build and Deploy
 
 on:
   push:
@@ -13,7 +13,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -34,4 +34,10 @@ jobs:
 
       - name: Run flake8 for code quality
         run: |
-          flake8 src tests  # Analisar código nas pastas src e tests
+          flake8 src tests
+
+      - name: Deploy to environment (Simulated)
+        if: success()
+        run: |
+          echo "Deploying to simulated environment..."
+          echo "Deploy successful!"
