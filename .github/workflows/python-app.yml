@@ -31,3 +31,7 @@ jobs:
       - name: Run tests with coverage
         run: |
           PYTHONPATH=./src pytest --cov=src
+
+      - name: Run flake8 for code quality
+        run: |
+          flake8 src tests  # Analisar código nas pastas src e tests
