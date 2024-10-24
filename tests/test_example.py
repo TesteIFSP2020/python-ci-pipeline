@@ -1,4 +1,3 @@
-import pytest
 from src.example import add
 
 def test_add():
